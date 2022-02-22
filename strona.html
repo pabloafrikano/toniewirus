@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .photo {
+            position: relative;
+            left: 20%;
+        }
+        .photo:hover {
+            position: relative;
+            left: 60%;
+            transition: 2s;
+        }
+    </style>
+    <script>
+        var audioTagSupport = !!(document.createElement('audio').canPlayType);
+        var myAudio = document.createElement('audio');
+   
+   if (myAudio.canPlayType) {
+    
+      // Currently canPlayType(type) returns: "", "maybe" or "probably"
+
+      var canPlayMp3 = !!myAudio.canPlayType && "" != myAudio.canPlayType('audio/mpeg');
+      var canPlayOgg = !!myAudio.canPlayType && "" != myAudio.canPlayType('audio/ogg; codecs="vorbis"');
+   }
+    </script>
+        <audio controls autoplay preload="auto" loop>
+            <source src="hello.mp3" />
+            <source src="hello.ogg" />
+          </audio>    
+</head>
+<body>
+<h1 align="center">i have your ip</h1>
+<img class="photo" src="adam.png">
+</body>
+</html>
